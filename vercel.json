@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 2,
   "builds": [
     {
       "src": "Zix.html",
@@ -11,14 +11,10 @@
       "src": "/(.*)",
       "dest": "/Zix.html",
       "headers": {
-        "Cache-Control": "public, max-age=3600, stale-while-revalidate=86400",
+        "Cache-Control": "public, max-age=3600",
         "X-Frame-Options": "DENY",
-        "X-Content-Type-Options": "nosniff",
-        "Referrer-Policy": "strict-origin-when-cross-origin"
+        "X-Content-Type-Options": "nosniff"
       }
     }
-  ],
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "framework": null
+  ]
 }

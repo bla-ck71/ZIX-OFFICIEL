@@ -1,0 +1,24 @@
+{
+  "version": 3,
+  "builds": [
+    {
+      "src": "Zix.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/Zix.html",
+      "headers": {
+        "Cache-Control": "public, max-age=3600, stale-while-revalidate=86400",
+        "X-Frame-Options": "DENY",
+        "X-Content-Type-Options": "nosniff",
+        "Referrer-Policy": "strict-origin-when-cross-origin"
+      }
+    }
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "framework": null
+}
